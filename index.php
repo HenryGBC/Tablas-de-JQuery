@@ -19,10 +19,10 @@
           <?php 
 if(isset($_POST["acceder"]))
 {
-    
+    	echo "<script type='text/javascript'> alert('EPaa');</script>";
 		$dbconn = pg_connect("host=ec2-54-235-180-39.compute-1.amazonaws.com port=5432 dbname=d3hj8254l1030h user=ssiwwumdmbosbc password=hZj0Nc0d_dafo2-Djmd1eZZXRt sslmode=require options='--client_encoding=UTF8'") or die('Could not connect: ' . pg_last_error());
 		
-	  echo "<script type='text/javascript'> alert('EPaa');</script>";
+	  
 
 	
 	$result = pg_query("SELECT * FROM usuario where usuario='".$_POST["user"]."' and clave='".$_POST["pass"]."'") or die('ERROR AL INSERTAR DATOS: ' . pg_last_error());
